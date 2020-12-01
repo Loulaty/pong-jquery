@@ -123,6 +123,7 @@ class Joueur extends ElementHtml{
         this.incrementeScore(10);
         this._rafraichitHTML();
         audio.fausseNote();
+        terrain.tilt();
         partie.demarreNouveauJeu();
     }
     /**

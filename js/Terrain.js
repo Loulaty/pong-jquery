@@ -29,4 +29,15 @@ class Terrain extends ElementHtml{
     affichePlay(){
         this.$element.removeClass("pause")
     }
+
+    /**
+     * Secoue le terrain
+     */
+    tilt(){
+        let ici=this;
+        ici.$element.addClass("animate__animated animate__headShake");
+        setTimeout(function(){
+            ici.$element.removeClass("animate__animated animate__headShake");
+        },3000);
+    }
 }
