@@ -4,4 +4,7 @@ Un petit pong au clavier simplissime
 ### Joueur 1
 touches A / Q 
 ### Joueur 2
-touches haut / bas 
+touches P / M
+
+#### C'est jouable ici.
+https://davidmars.github.io/pong-jquery
