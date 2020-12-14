@@ -1,4 +1,4 @@
-# pong-jquery
+# pong-monoplayer
 Un petit pong au clavier simplissime
 
 ### Joueur 1
@@ -7,4 +7,4 @@ touches A / Q
 touches P / M
 
 #### C'est jouable ici.
-https://davidmars.github.io/pong-jquery
+https://loulaty.github.io/pong-monoplayer/index.html
