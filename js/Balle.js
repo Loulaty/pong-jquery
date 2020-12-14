@@ -124,8 +124,8 @@ class Balle extends ElementHtml {
      */
     calculeVariablesQuiDependentDeLaTailleDeLEcran() {
         this.vitesseMax = terrain.largeur / 150;
-        this.acceleration = terrain.largeur / 2000;
-        this.vitesseDepart = terrain.largeur / 500;
+        this.acceleration = terrain.largeur / 3000;
+        this.vitesseDepart = terrain.largeur / 1000;
     }
     /**
      * accelère la balle (avec une petite limite quand même)
@@ -200,13 +200,13 @@ class Balle extends ElementHtml {
         }
         //perdu ?
         if (this._toucheCoteGauche()) {
-            joueur2.perd();
-            vie= -1;
+            joueur.perd();
+            vie.vieperdue();
             
         }
         if (this._toucheCoteDroite()) {
-            joueur1.perd();
-            vie= -1;
+            vie.vieperdue();
+            joueur.perd();
         }
     }
 

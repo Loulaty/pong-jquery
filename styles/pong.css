@@ -2,7 +2,7 @@ html{
     margin: 0;
     padding:0;
     overflow: hidden;
-    --couleur-fond:rgb(158, 85, 255);
+    --couleur-fond:rgb(212, 179, 255);
     --couleur-elements:rgb(217, 151, 255);
     --couleur-on-sait-pas-trop:#e4a3ff;
     --couleur-on-sait-pas-trop-foncee:rgb(131, 52, 235);

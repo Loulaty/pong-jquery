@@ -4,6 +4,7 @@ class Joueur extends ElementHtml{
      *
      * @param {JQuery<HTMLElement>} $raquette L'élément HTML de la raquette
      * @param {JQuery<HTMLElement>} $score L'élément HTML du score
+     * @param {JQuery<HTMLElement>} $vie L'élément HTML du score
      * @param {JQuery<HTMLElement>} $boutonMonte L'élément HTML du bouton pour monter
      * @param {JQuery<HTMLElement>} $boutonDescend L'élément HTML du bouton pour descendre
      */
@@ -106,8 +107,13 @@ class Joueur extends ElementHtml{
         this._effetScore();
         this.$score.text(this.score);
     }
+     /**
+     * Fait perdre des vies au joueur
+     * @param {Number} coeurs Les points gagnés
+     */
     vieperdue(coeurs){
         this.vie-=coeurs;
+        this.$vie.text(this.vie);
     }
     /**
      * Effet visuel (et sonore) qui se produit quand on touche la balle
@@ -133,7 +139,7 @@ class Joueur extends ElementHtml{
     }
     perd(){
         //on enlève une vie
-        this.vieperdue(-1);
+        this.vieperdue(1);
         this._rafraichitHTML();
         partie.demarreNouveauJeu();
     }
