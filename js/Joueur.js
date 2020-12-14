@@ -35,6 +35,11 @@ class Joueur extends ElementHtml{
          */
         this.score=0;
         /**
+         * La vie du joueur
+         * @type {number}
+         */
+        this.vie=5;
+        /**
          * La vitesse de déplacement de la raquette
          * @type {number}
          */
@@ -101,6 +106,9 @@ class Joueur extends ElementHtml{
         this._effetScore();
         this.$score.text(this.score);
     }
+    vieperdue(coeurs){
+        this.vie-=coeurs;
+    }
     /**
      * Effet visuel (et sonore) qui se produit quand on touche la balle
      */
@@ -122,10 +130,14 @@ class Joueur extends ElementHtml{
         //on aumente son score
         this.incrementeScore(10);
         this._rafraichitHTML();
-        audio.fausseNote();
-        terrain.tilt();
+    }
+    perd(){
+        //on enlève une vie
+        this.vieperdue(-1);
+        this._rafraichitHTML();
         partie.demarreNouveauJeu();
     }
+
     /**
      * Applique les valeurs en CSS
      * @private

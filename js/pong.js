@@ -12,7 +12,7 @@ let balle=new Balle($(".balle"));
  * Le joueur à gauche
  * @type {Joueur}
  */
-let joueur1=new Joueur($(".joueur1"),$(".score1"),$("#monte1"),$("#descend1"));
+let joueur1=new Joueur($(".joueur1"),$(".score"),$("#monte1"),$("#descend1"),$(".vie"));
 
 /**
  * Le joueur à droite
@@ -21,9 +21,10 @@ let joueur1=new Joueur($(".joueur1"),$(".score1"),$("#monte1"),$("#descend1"));
  */
 let joueur2=new Joueur(
     $(".joueur2"),
-    $(".score2"),
+    $(".score"),
     $("#monte2"),
-    $("#descend2")
+    $("#descend2"),
+    $(".vie")
 );
 
 /**

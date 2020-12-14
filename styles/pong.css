@@ -2,16 +2,16 @@ html{
     margin: 0;
     padding:0;
     overflow: hidden;
-    --couleur-fond:#000;
-    --couleur-elements:#FFF;
-    --couleur-on-sait-pas-trop:#808080;
-    --couleur-on-sait-pas-trop-foncee:#222;
-    --couleur-erreur:#F00;
-    --couleur-succes:#0f0;
+    --couleur-fond:rgb(158, 85, 255);
+    --couleur-elements:rgb(217, 151, 255);
+    --couleur-on-sait-pas-trop:#e4a3ff;
+    --couleur-on-sait-pas-trop-foncee:rgb(131, 52, 235);
+    --couleur-erreur:rgb(255, 0, 98);
+    --couleur-succes:rgb(255, 148, 232);
 }
 body{
     background-color: var(--couleur-fond);
-    color: #ffffff;
+    color: rgb(26, 6, 82);
     font-family: monospace;
     display: flex;
     justify-content: center;
@@ -49,7 +49,7 @@ body{
 
 .balle{
     transition: color 2s;
-    background-color: #fff;
+    background-color:rgb(195, 105, 247);
     --diamettre:20px;
     width: var(--diamettre);
     height: var(--diamettre);
@@ -60,7 +60,7 @@ body{
 
 .raquette{
     --hauteur:25%;
-    background-color: #fff;
+    background-color: rgb(195, 105, 247);
     width: 10px;
     height:var(--hauteur);
     outline: 1px solid var(--couleur-fond);
@@ -75,7 +75,7 @@ body{
 }
 
 .raquette.touche-balle{
-    background-color: #0f0;
+    background-color: rgb(95, 78, 255);
 }
 .raquette.rate-balle{
     background-color: var(--couleur-erreur);
@@ -87,22 +87,24 @@ body{
 
 /** les scores des joueurs **/
 .score{
-    top: 0;
-    left: 0;
     width: 50%;
     height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
+    font-size: 20px;
     color:var(--couleur-elements);
     opacity: 0.2;
     transition: color 0.5s;
 }
-.score2{
-    left:50%;
-}
 
+.vie{
+    display: flex;
+    font-size: 20px;
+    transition: color 0.5s;
+    width: 50%;
+    height: 100%;
+    left: 80%;
+
+}
 
 
 /** les boutons qui symbolisent les touches du clavier **/
@@ -139,7 +141,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.8);
+    background: rgba(255, 253, 255, 0.815);
     z-index: 1;
     display: flex;
 
@@ -173,7 +175,7 @@ body{
 
 /* un simple bouton (utilisé uniquement sur l'écran de début) */
 .btn{
-    color: var(--couleur-fond);
+    color: rgb(26, 6, 82);
     background-color:var(--couleur-elements);
     padding: 5px 10px;
     text-decoration: none;
@@ -189,6 +191,3 @@ body{
         transform: rotate(-90deg);
     }
 }
-
-
-

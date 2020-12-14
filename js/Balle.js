@@ -123,7 +123,7 @@ class Balle extends ElementHtml {
      * Est appelé plus haut quand on redimensionne l'écran et que la taille du jeu change
      */
     calculeVariablesQuiDependentDeLaTailleDeLEcran() {
-        this.vitesseMax = terrain.largeur / 100;
+        this.vitesseMax = terrain.largeur / 150;
         this.acceleration = terrain.largeur / 2000;
         this.vitesseDepart = terrain.largeur / 500;
     }
@@ -186,11 +186,13 @@ class Balle extends ElementHtml {
                 joueur1.effetToucheBalle();
                 this._devieDirection(joueur1);
                 this._vaVersLaDroite();
+                joueur2.gagne();
             }
             if (this._toucheJoueur2()) {
                 joueur2.effetToucheBalle();
                 this._devieDirection(joueur2);
                 this._vaVersLaGauche();
+                joueur2.gagne();
             }
             this.gauche += this.vitesse * this.directionX;
             //si on touche une raquette on accélère la balle
@@ -198,10 +200,13 @@ class Balle extends ElementHtml {
         }
         //perdu ?
         if (this._toucheCoteGauche()) {
-            joueur2.gagne();
+            joueur2.perd();
+            vie= -1;
+            
         }
         if (this._toucheCoteDroite()) {
-            joueur1.gagne();
+            joueur1.perd();
+            vie= -1;
         }
     }
 
